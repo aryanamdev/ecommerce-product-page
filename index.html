@@ -1,0 +1,268 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Product Page</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <style>
+      html,
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- challenge -->
+
+    <!-- <div>
+      Your challenge is to build out this e-commerce product page and get it looking exactly as design.
+  
+      <h2>Your users should be able to:</h2>
+      <ul>
+        <li>View the optimal layout for the site depending on their device's screen size</li>
+        <li>Add items to the cart</li>
+        <li>View the cart and remove items from it</li>
+      </ul>
+  
+      <h2>Where to find the details?</h2>
+      <ul>
+        <li>See the design folder for design references [both desktop and mobile]</li>
+        <li>See the images folder for assets</li>
+        <li>See the style-guide.md for font-family, font-size, and color references</li>
+      </ul>
+  
+      <h2>What you should use?</h2>
+      <ul>
+        <li>For image gallery make use of <a href="https://flickity.metafizzy.co/" target="_blank">Flickity slider</a> for mobile</li>
+        <li>All the other required assets and guides are attached</li>
+      </ul>
+    </div> -->
+
+    <!-- notification goes here -->
+    <section class="notification" id="notification">
+      <h6>FREE DELIVERY ON ORDER ABOVE Rs. 2000/-</h6>
+    </section>
+
+    <!-- navbar goes here -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <!-- hamburger menu -->
+        <div class="hamburgerWrapper">
+          <li class="fa-bars fa-solid"></li>
+        </div>
+
+        <!-- logo -->
+        <div class="logoWrapper">
+          <img src="/images/black_logo.png" alt="" />
+        </div>
+
+        <!-- navitems -->
+        <ul class="navItems">
+          <li>Men</li>
+          <li>Women</li>
+          <li>Kids</li>
+          <li>Home & Living</li>
+        </ul>
+
+        <!-- search icon and cart -->
+        <div class="searchAndCart">
+          <i class="fa-search fa-solid"></i>
+
+          <i class="fa-solid fa-user"></i>
+
+          <div class="cartWrapper">
+            <img src="/images/icon-cart.svg" alt="" />
+            <span class=""></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+      <!-- product and carousel -->
+      <section class="productAndCarousel">
+        <!-- product image -->
+        <section class="productImage" id="productImage">
+          <div class="productImageWrapper">
+            <img src="/images/product-image-1.png" alt="" class="mainImg" />
+          </div>
+          <div class="desktop productImageWrapper">
+            <img src="/images/product-image-2.png" alt="" />
+          </div>
+          <div class="desktop productImageWrapper">
+            <img src="/images/product-image-3.png" alt="" />
+          </div>
+          <div class="desktop productImageWrapper">
+            <img src="/images/product-image-4.png" alt="" />
+          </div>
+        </section>
+
+        <!-- carousel -->
+        <section class="carousel">
+          <!-- left caret -->
+          <i class="caret fa-caret-left fa-solid"> </i>
+
+          <!-- images of carousel -->
+          <div class="imagesOfCarousel">
+            <!-- image 1 -->
+            <div class="imageWrapper">
+              <img
+                onclick="imgChanger('/images/product-image-1.png')"
+                src="/images/product-image-1.png"
+                alt=""
+              />
+            </div>
+
+            <!-- image 2 -->
+            <div class="imageWrapper">
+              <img
+                onclick="imgChanger('/images/product-image-2.png')"
+                src="/images/product-image-2.png"
+                alt=""
+              />
+            </div>
+
+            <!-- image 3 -->
+            <div class="imageWrapper">
+              <img
+                onclick="imgChanger('/images/product-image-3.png')"
+                src="/images/product-image-3.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- right caret -->
+          <i class="caret fa-caret-right fa-solid"> </i>
+        </section>
+      </section>
+
+      <!--  product information -->
+      <section class="informationOfProduct">
+        <div class="aboutProduct">
+          <p>CLOTHING COMPANY</p>
+          <h2>Ruffled Sleeveless Top</h2>
+        </div>
+
+        <!-- price -->
+
+        <div class="productPrice">
+          <div class="strike">
+            <p><strike>Rs. 1,500.00</strike></p>
+          </div>
+
+          <div class="price">
+            <p>Rs. 899.00</p>
+          </div>
+
+          <div class="sale">Sale</div>
+        </div>
+
+        <!-- size -->
+
+        <div class="size">
+          Size
+          <div class="sizeWrapper">
+            <div class="sizes">S</div>
+            <div class="sizes">M</div>
+            <div class="sizes">L</div>
+            <div class="sizes">XL</div>
+          </div>
+        </div>
+
+        <!-- quantity -->
+        <div class="quantity">
+          <p>Quantity</p>
+          <div class="quantityWrapper">
+            <span class="counter less">-</span>
+            <span id="count" class="count">1</span>
+            <span class="counter more">+</span>
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <button type="button" id="addToCart" class="button">Add to cart</button>
+
+        <button type="button" id="buyIt" class="button">But it now</button>
+
+        <!-- content -->
+        <div class="contentProduct">
+          <p class="para">
+            A dreamy feminine piece, this top is made from a medium weight,
+            extra soft cotton blend with a light airy feel and paper like
+            quality.
+          </p>
+
+          <p class="para">
+            Designed with voluminous ruffled straps as well as ruffle details
+            across the chest, it has a straight cut fit and a square neckline.
+          </p>
+        </div>
+
+        <!-- accordion -->
+
+        <div class="accordion">
+          <div>
+            <div class="imgWrapper">
+              <img src="/images/icon-materials.svg" alt="" />
+              <h4>Materials</h4>
+            </div>
+            <i class="fa-caret-down fa-solid caret-down"></i>
+          </div>
+
+          <div>
+            <div class="imgWrapper">
+              <img src="/images/icon-shipping.svg" alt="" />
+              <h4>Materials</h4>
+            </div>
+            <i class="fa-caret-down fa-solid caret-down"></i>
+          </div>
+          <div>
+            <div class="imgWrapper">
+              <img src="/images/icon-dimensions.svg" alt="" />
+              <h4>Materials</h4>
+            </div>
+            <i class="fa-caret-down fa-solid caret-down"></i>
+          </div>
+          <div>
+            <div class="imgWrapper">
+              <img src="/images/icon-care.svg" alt="" />
+              <h4>Materials</h4>
+            </div>
+            <i class="fa-caret-down fa-solid caret-down"></i>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
